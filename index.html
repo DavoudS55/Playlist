@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>Red Velvet — Your Playlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow glow-one"></div>
+  <div class="bg-glow glow-two"></div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">♫</span>
+        <div>
+          <span class="eyebrow">A LITTLE PLAYLIST</span>
+          <h1>Red Velvet</h1>
+        </div>
+      </div>
+      <button class="icon-btn" id="muteBtn" aria-label="Mute">🔊</button>
+    </header>
+
+    <section class="hero">
+      <div class="cover-wrap">
+        <div class="cover-ring"></div>
+        <img id="cover" src="images/cover.jpg" alt="Playlist cover"
+             onerror="this.src='https://placehold.co/700x700/0d0d0d/e5092f?text=YOUR+PLAYLIST'">
+      </div>
+
+      <div class="track-info">
+        <span class="pill">NOW PLAYING</span>
+        <h2 id="title">Your First Song</h2>
+        <p id="artist">Your Friend's Playlist</p>
+
+        <div class="progress-area">
+          <input id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress">
+          <div class="time-row">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn small" id="shuffleBtn" aria-label="Shuffle">⤨</button>
+          <button class="control-btn" id="prevBtn" aria-label="Previous">⏮</button>
+          <button class="play-btn" id="playBtn" aria-label="Play">▶</button>
+          <button class="control-btn" id="nextBtn" aria-label="Next">⏭</button>
+          <button class="control-btn small" id="repeatBtn" aria-label="Repeat">↻</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="playlist-section">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">YOUR COLLECTION</span>
+          <h3>Playlist</h3>
+        </div>
+        <span class="count" id="count">0 tracks</span>
+      </div>
+
+      <div class="playlist" id="playlist"></div>
+    </section>
+
+    <footer>
+      <span>Made with ♥ for someone special</span>
+      <span class="dot"></span>
+      <span>Red & Black Edition</span>
+    </footer>
+  </main>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
